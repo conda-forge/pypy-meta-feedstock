@@ -1,5 +1,6 @@
 {% set version = "7.3.0" %}
 {% set python_version = "3.6.9" %}
+{% set cffi_version = "1.13.2" %}
 {% set python_maj_min = ".".join(python_version.split(".")[:2]) %}
 {% set build_num = "0" %}
 {% set pypy_abi = "".join(version.split(".")[:2]) %}
@@ -40,6 +41,7 @@ outputs:
     test:
       commands:
         - python --version
+        - test $(python -c "import sys;print('.'.join(str(i) for i in sys.version_info[:3]))") == "{{ python_version }}"
 
   - name: pypy
     version: {{ version }}
@@ -52,6 +54,21 @@ outputs:
     test:
       commands:
         - pypy --version
+
+  - name: cffi
+    version: {{ cffi_version }}
+    build:
+      number: {{ build_num }}
+      string: {{ build_num }}_pypy
+      noarch: generic
+    requirements:
+      run:
+        - pypy{{ python_maj_min }} {{ version }}
+        - python {{ python_version }} {{ build_num }}_{{ pypy_abi }}_pypy
+        - python_abi {{ python_maj_min }} *_pypy{{ python_maj_min.replace(".", "") }}_pp{{ pypy_abi }}
+    test:
+      commands:
+        - test $(python -c "import cffi;print(cffi.__version__)") == "{{ cffi_version }}"
 
 about:
   home: https://github.com/conda-forge/pypy-feedstock
