@@ -59,11 +59,13 @@ outputs:
     version: {{ cffi_version }}
     build:
       number: {{ build_num }}
+      string: {{ build_num }}_pypy
       noarch: generic
     requirements:
       run:
         - pypy{{ python_maj_min }} {{ version }}
         - python {{ python_version }} {{ build_num }}_{{ pypy_abi }}_pypy
+        - python_abi {{ python_maj_min }} *_pypy{{ python_maj_min.replace(".", "") }}_pp{{ pypy_abi }}
     test:
       commands:
         - test $(python -c "import cffi;print(cffi.__version__)") == "{{ cffi_version }}"
