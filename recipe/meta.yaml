@@ -1,6 +1,6 @@
-{% set version = "7.3.0" %}
+{% set version = "7.3.1" %}
 {% set python_version = "3.6.9" %}
-{% set cffi_version = "1.13.2" %}
+{% set cffi_version = "1.14.0" %}
 {% set python_maj_min = ".".join(python_version.split(".")[:2]) %}
 {% set build_num = "0" %}
 {% set pypy_abi = "".join(version.split(".")[:2]) %}
@@ -59,7 +59,7 @@ outputs:
     version: {{ cffi_version }}
     build:
       number: {{ build_num }}
-      string: {{ build_num }}_pypy
+      string: {{ build_num }}_pypy{{ version.replace(".", "") }}
       noarch: generic
     requirements:
       run:
