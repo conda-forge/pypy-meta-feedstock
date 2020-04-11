@@ -3,7 +3,7 @@
 {% set cffi_version = "1.14.0" %}
 {% set python_maj_min = ".".join(python_version.split(".")[:2]) %}
 # Keep increasing this until we get a new python_version. Do not reset
-{% set build_num = "1" %}
+{% set build_num = "2" %}
 {% set pypy_abi = "".join(version.split(".")[:2]) %}
 
 package:
@@ -25,6 +25,7 @@ outputs:
         - pypy
       run_exports:
         weak:
+          - pypy{{ python_maj_min }} >={{ version }}
           - python_abi {{ python_maj_min }} *_pypy{{ python_maj_min.replace(".", "") }}_pp{{ pypy_abi }}
         noarch:
           - {{ pin_subpackage("python", max_pin="x.x", min_pin="x.x") }}
