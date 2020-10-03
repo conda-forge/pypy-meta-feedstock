@@ -1,9 +1,9 @@
-{% set version = "7.3.1" %}
+{% set version = "7.3.2" %}
 {% set python_version = "3.6.9" %}
-{% set cffi_version = "1.14.0" %}
+{% set cffi_version = "1.14.2" %}
 {% set python_maj_min = ".".join(python_version.split(".")[:2]) %}
 # Keep increasing this until we get a new python_version. Do not reset
-{% set build_num = "2" %}
+{% set build_num = "3" %}
 {% set pypy_abi = "".join(version.split(".")[:2]) %}
 
 package:
@@ -82,3 +82,4 @@ about:
 extra:
   recipe-maintainers:
     - isuruf
+    - mattip
