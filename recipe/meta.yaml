@@ -1,9 +1,11 @@
-{% set version = "7.3.2" %}
+{% set version = "7.3.3" %}
+{% if python_version is not defined %}
 {% set python_version = "3.6.9" %}
-{% set cffi_version = "1.14.2" %}
+{% endif %}
+{% set cffi_version = "1.14.3" %}
 {% set python_maj_min = ".".join(python_version.split(".")[:2]) %}
 # Keep increasing this until we get a new python_version. Do not reset
-{% set build_num = "3" %}
+{% set build_num = "4" %}
 {% set pypy_abi = "".join(version.split(".")[:2]) %}
 
 package:
