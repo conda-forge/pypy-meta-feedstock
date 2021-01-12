@@ -51,7 +51,7 @@ outputs:
     version: {{ version }}
     build:
       number: {{ build_num }}
-      string: pypy {{ python_maj_min }}
+      string: {{ build_num }}_pypy{{ python_maj_min.replace(".", "") }}
       noarch: generic
     requirements:
       run:
@@ -64,7 +64,7 @@ outputs:
     version: {{ cffi_version }}
     build:
       number: {{ build_num }}
-      string: {{ build_num }}_pypy
+      string: {{ build_num }}_pypy{{ python_maj_min.replace(".", "") }}
       noarch: generic
     requirements:
       run:
