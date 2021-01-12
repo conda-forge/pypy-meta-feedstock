@@ -5,7 +5,7 @@
 {% set cffi_version = "1.14.3" %}
 {% set python_maj_min = ".".join(python_version.split(".")[:2]) %}
 # Keep increasing this until we get a new python_version. Do not reset
-{% set build_num = "4" %}
+{% set build_num = "5" %}
 {% set pypy_abi = "".join(version.split(".")[:2]) %}
 
 package:
@@ -51,6 +51,7 @@ outputs:
     version: {{ version }}
     build:
       number: {{ build_num }}
+      string: {{ build_num }}_pypy{{ python_maj_min.replace(".", "") }}
       noarch: generic
     requirements:
       run:
@@ -63,7 +64,7 @@ outputs:
     version: {{ cffi_version }}
     build:
       number: {{ build_num }}
-      string: {{ build_num }}_pypy
+      string: {{ build_num }}_pypy{{ python_maj_min.replace(".", "") }}
       noarch: generic
     requirements:
       run:
