@@ -17,6 +17,6 @@ pin_run_as_build:
 python:
 - 3.8.* *_cpython
 python_version:
-- 3.7.10
+- 3.7.12
 target_platform:
 - linux-aarch64
