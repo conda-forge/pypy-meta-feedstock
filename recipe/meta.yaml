@@ -1,8 +1,8 @@
-{% set version = "7.3.7" %}
+{% set version = "7.3.8" %}
 {% if python_version is not defined %}
-{% set python_version = "3.7.10" %}
+{% set python_version = "3.8.12" %}
 {% endif %}
-{% set cffi_version = "1.14.6" %}
+{% set cffi_version = "1.15.0" %}
 {% set python_maj_min = ".".join(python_version.split(".")[:2]) %}
 # Keep increasing this until we get a new version, python_version and cffi_version. Do not reset
 {% set build_num = "0" %}
