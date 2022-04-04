@@ -8,78 +8,30 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_python3.7.____cpythonpython_version3.8.12:
-        CONFIG: linux_64_python3.7.____cpythonpython_version3.8.12
+      linux_64_python3.7.____cpythonpython_version3.8.13:
+        CONFIG: linux_64_python3.7.____cpythonpython_version3.8.13
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_python3.7.____cpythonpython_version3.9.10:
-        CONFIG: linux_64_python3.7.____cpythonpython_version3.9.10
+      linux_64_python3.7.____cpythonpython_version3.9.12:
+        CONFIG: linux_64_python3.7.____cpythonpython_version3.9.12
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_python3.8.____cpythonpython_version3.8.12:
-        CONFIG: linux_64_python3.8.____cpythonpython_version3.8.12
+      linux_64_python3.8.____cpythonpython_version3.8.13:
+        CONFIG: linux_64_python3.8.____cpythonpython_version3.8.13
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_python3.8.____cpythonpython_version3.9.10:
-        CONFIG: linux_64_python3.8.____cpythonpython_version3.9.10
+      linux_64_python3.8.____cpythonpython_version3.9.12:
+        CONFIG: linux_64_python3.8.____cpythonpython_version3.9.12
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_python3.9.____cpythonpython_version3.8.12:
-        CONFIG: linux_64_python3.9.____cpythonpython_version3.8.12
+      linux_64_python3.9.____cpythonpython_version3.8.13:
+        CONFIG: linux_64_python3.9.____cpythonpython_version3.8.13
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_python3.9.____cpythonpython_version3.9.10:
-        CONFIG: linux_64_python3.9.____cpythonpython_version3.9.10
+      linux_64_python3.9.____cpythonpython_version3.9.12:
+        CONFIG: linux_64_python3.9.____cpythonpython_version3.9.12
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_python3.7.____cpythonpython_version3.8.12:
-        CONFIG: linux_aarch64_python3.7.____cpythonpython_version3.8.12
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64
-      linux_aarch64_python3.7.____cpythonpython_version3.9.10:
-        CONFIG: linux_aarch64_python3.7.____cpythonpython_version3.9.10
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64
-      linux_aarch64_python3.8.____cpythonpython_version3.8.12:
-        CONFIG: linux_aarch64_python3.8.____cpythonpython_version3.8.12
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64
-      linux_aarch64_python3.8.____cpythonpython_version3.9.10:
-        CONFIG: linux_aarch64_python3.8.____cpythonpython_version3.9.10
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64
-      linux_aarch64_python3.9.____cpythonpython_version3.8.12:
-        CONFIG: linux_aarch64_python3.9.____cpythonpython_version3.8.12
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64
-      linux_aarch64_python3.9.____cpythonpython_version3.9.10:
-        CONFIG: linux_aarch64_python3.9.____cpythonpython_version3.9.10
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64
-      linux_ppc64le_python3.7.____cpythonpython_version3.8.12:
-        CONFIG: linux_ppc64le_python3.7.____cpythonpython_version3.8.12
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-ppc64le
-      linux_ppc64le_python3.7.____cpythonpython_version3.9.10:
-        CONFIG: linux_ppc64le_python3.7.____cpythonpython_version3.9.10
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-ppc64le
-      linux_ppc64le_python3.8.____cpythonpython_version3.8.12:
-        CONFIG: linux_ppc64le_python3.8.____cpythonpython_version3.8.12
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-ppc64le
-      linux_ppc64le_python3.8.____cpythonpython_version3.9.10:
-        CONFIG: linux_ppc64le_python3.8.____cpythonpython_version3.9.10
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-ppc64le
-      linux_ppc64le_python3.9.____cpythonpython_version3.8.12:
-        CONFIG: linux_ppc64le_python3.9.____cpythonpython_version3.8.12
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-ppc64le
-      linux_ppc64le_python3.9.____cpythonpython_version3.9.10:
-        CONFIG: linux_ppc64le_python3.9.____cpythonpython_version3.9.10
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-ppc64le
   timeoutInMinutes: 360
 
   steps:
