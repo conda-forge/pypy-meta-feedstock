@@ -1,5 +1,16 @@
+# cpython (stdlib) version as present in current pypy
 python_version:
 # - 3.6.12
 # - 3.7.12
 - 3.8.13
 - 3.9.12
+
+# override python-variants from global pinning as rerender otherwise needlessly
+# creates duplicate CI jobs based on picking up something from meta.yaml
+python:
+- "3.9.* *_cpython"
+# needs to override some other zipped keys as well
+numpy:
+- "1.22"
+python_impl:
+- cpython
