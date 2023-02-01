@@ -5,26 +5,14 @@
 jobs:
 - job: osx
   pool:
-    vmImage: macOS-10.15
+    vmImage: macOS-11
   strategy:
     matrix:
-      osx_64_python3.7.____cpythonpython_version3.8.13:
-        CONFIG: osx_64_python3.7.____cpythonpython_version3.8.13
+      osx_64_python_version3.8.16:
+        CONFIG: osx_64_python_version3.8.16
         UPLOAD_PACKAGES: 'True'
-      osx_64_python3.7.____cpythonpython_version3.9.12:
-        CONFIG: osx_64_python3.7.____cpythonpython_version3.9.12
-        UPLOAD_PACKAGES: 'True'
-      osx_64_python3.8.____cpythonpython_version3.8.13:
-        CONFIG: osx_64_python3.8.____cpythonpython_version3.8.13
-        UPLOAD_PACKAGES: 'True'
-      osx_64_python3.8.____cpythonpython_version3.9.12:
-        CONFIG: osx_64_python3.8.____cpythonpython_version3.9.12
-        UPLOAD_PACKAGES: 'True'
-      osx_64_python3.9.____cpythonpython_version3.8.13:
-        CONFIG: osx_64_python3.9.____cpythonpython_version3.8.13
-        UPLOAD_PACKAGES: 'True'
-      osx_64_python3.9.____cpythonpython_version3.9.12:
-        CONFIG: osx_64_python3.9.____cpythonpython_version3.9.12
+      osx_64_python_version3.9.16:
+        CONFIG: osx_64_python_version3.9.16
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
 
