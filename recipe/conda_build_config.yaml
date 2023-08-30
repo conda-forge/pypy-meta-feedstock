@@ -3,7 +3,16 @@ python_version:
 # - 3.6.12
 # - 3.7.12
 - 3.8.16
-- 3.9.16
+- 3.9.17
+# Python 3.8 got dropped as of PyPy 7.3.12
+version:
+- 7.3.11
+- 7.3.12
+
+zip_keys:
+  -
+    - python_version
+    - version
 
 # override python-variants from global pinning as rerender otherwise needlessly
 # creates duplicate CI jobs based on picking up something from meta.yaml
