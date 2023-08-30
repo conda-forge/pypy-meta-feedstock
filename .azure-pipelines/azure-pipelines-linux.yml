@@ -8,38 +8,33 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_python_version3.8.16:
-        CONFIG: linux_64_python_version3.8.16
+      linux_64_python_version3.8.16version7.3.11:
+        CONFIG: linux_64_python_version3.8.16version7.3.11
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_python_version3.9.16:
-        CONFIG: linux_64_python_version3.9.16
+      linux_64_python_version3.9.17version7.3.12:
+        CONFIG: linux_64_python_version3.9.17version7.3.12
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_python_version3.8.16:
-        CONFIG: linux_aarch64_python_version3.8.16
+      linux_aarch64_python_version3.8.16version7.3.11:
+        CONFIG: linux_aarch64_python_version3.8.16version7.3.11
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64
-      linux_aarch64_python_version3.9.16:
-        CONFIG: linux_aarch64_python_version3.9.16
+      linux_aarch64_python_version3.9.17version7.3.12:
+        CONFIG: linux_aarch64_python_version3.9.17version7.3.12
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64
-      linux_ppc64le_python_version3.8.16:
-        CONFIG: linux_ppc64le_python_version3.8.16
+      linux_ppc64le_python_version3.8.16version7.3.11:
+        CONFIG: linux_ppc64le_python_version3.8.16version7.3.11
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-ppc64le
-      linux_ppc64le_python_version3.9.16:
-        CONFIG: linux_ppc64le_python_version3.9.16
+      linux_ppc64le_python_version3.9.17version7.3.12:
+        CONFIG: linux_ppc64le_python_version3.9.17version7.3.12
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-ppc64le
   timeoutInMinutes: 360
 
   steps:
-  - script: |
-         rm -rf /opt/ghc
-         df -h
-    displayName: Manage disk space
-
   # configure qemu binfmt-misc running.  This allows us to run docker containers
   # embedded qemu-static
   - script: |

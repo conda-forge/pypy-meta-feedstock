@@ -1,6 +1,8 @@
-{% set version = "7.3.11" %}
+{% if version is not defined %}
+{% set version = "7.3.12" %}
+{% endif %}
 {% if python_version is not defined %}
-{% set python_version = "3.8.16" %}
+{% set python_version = "3.9.17" %}
 {% endif %}
 {% set cffi_version = "1.15.1" %}
 {% set python_maj_min = ".".join(python_version.split(".")[:2]) %}
