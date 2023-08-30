@@ -13,6 +13,11 @@ pin_run_as_build:
 python:
 - 3.10.* *_cpython
 python_version:
-- 3.8.16
+- 3.9.17
 target_platform:
 - osx-64
+version:
+- 7.3.12
+zip_keys:
+- - python_version
+  - version

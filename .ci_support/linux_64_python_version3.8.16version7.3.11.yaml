@@ -16,3 +16,8 @@ python_version:
 - 3.8.16
 target_platform:
 - linux-64
+version:
+- 7.3.11
+zip_keys:
+- - python_version
+  - version

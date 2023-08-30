@@ -8,11 +8,11 @@ jobs:
     vmImage: macOS-11
   strategy:
     matrix:
-      osx_64_python_version3.8.16:
-        CONFIG: osx_64_python_version3.8.16
+      osx_64_python_version3.8.16version7.3.11:
+        CONFIG: osx_64_python_version3.8.16version7.3.11
         UPLOAD_PACKAGES: 'True'
-      osx_64_python_version3.9.16:
-        CONFIG: osx_64_python_version3.9.16
+      osx_64_python_version3.9.17version7.3.12:
+        CONFIG: osx_64_python_version3.9.17version7.3.12
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
 
