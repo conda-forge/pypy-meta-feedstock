@@ -7,7 +7,7 @@ python_version:
 # Python 3.8 got dropped as of PyPy 7.3.12
 version:
 - 7.3.11
-- 7.3.13
+- 7.3.15
 
 zip_keys:
   -
