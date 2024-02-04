@@ -8,28 +8,16 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_python_version3.8.16version7.3.11:
-        CONFIG: linux_64_python_version3.8.16version7.3.11
+      linux_64_:
+        CONFIG: linux_64_
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_python_version3.9.18version7.3.15:
-        CONFIG: linux_64_python_version3.9.18version7.3.15
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_python_version3.8.16version7.3.11:
-        CONFIG: linux_aarch64_python_version3.8.16version7.3.11
+      linux_aarch64_:
+        CONFIG: linux_aarch64_
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64
-      linux_aarch64_python_version3.9.18version7.3.15:
-        CONFIG: linux_aarch64_python_version3.9.18version7.3.15
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64
-      linux_ppc64le_python_version3.8.16version7.3.11:
-        CONFIG: linux_ppc64le_python_version3.8.16version7.3.11
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-ppc64le
-      linux_ppc64le_python_version3.9.18version7.3.15:
-        CONFIG: linux_ppc64le_python_version3.9.18version7.3.15
+      linux_ppc64le_:
+        CONFIG: linux_ppc64le_
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-ppc64le
   timeoutInMinutes: 360
